@@ -1,0 +1,74 @@
+<p>Reistration work>!</p>
+<div class="card col-md-6 offset-3 mt-4 mb-4">
+    <div class="card-body">
+        <div class="form">
+            <form [formGroup]="regGroup">
+                <h1 class="h1 text-center text-success">Resistration Form</h1>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="FN">FirstName</label>
+                        <input type="text" class="form-control" ngModel formControlName="fname"
+                            placeholder="Enter your FirstName">
+                        <span style="color: red;"
+                            *ngIf="regGroup.get('fname') && regGroup.get('fname').touched && regGroup.get('fname').invalid">Plese
+                            fill out Your FirstName
+                        </span>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="LN">LastName</label>
+                        <input type="text" class="form-control" ngModel formControlName="ln"
+                            placeholder="Enter your LastName">
+                        <span style="color: red;"
+                            *ngIf="regGroup.get('ln') && regGroup.get('ln').touched && regGroup.get('ln').invalid">Plese
+                            fill out Your LastName
+                        </span>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="MN">MiddleName</label>
+                        <input type="text" class="form-control" ngModel formControlName="mn"
+                            placeholder="Enter your MiddleName">
+                        <span style="color: red;"
+                            *ngIf="regGroup.get('mn') && regGroup.get('mn').touched && regGroup.get('mn').invalid">Plese
+                            fill out Your MiddleName
+                        </span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="email">UserName/Email</label>
+                        <input type="text" class="form-control" ngModel formControlName="username"
+                            placeholder="UserName/Email">
+                        <span style="color: red;"
+                            *ngIf="regGroup.get('username') && regGroup.get('username').touched && regGroup.get('username').invalid">Plese
+                            fill out Your UserName/Email
+                        </span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="pwd">Password</label>
+                        <input type="password" class="form-control" ngModel formControlName="password"
+                            placeholder="Enter your password">
+                        <span style="color: red;"
+                            *ngIf="regGroup.get('password') && regGroup.get('password').touched && regGroup.get('password').invalid">Plese
+                            fill out the Pasword
+                        </span>
+                    </div>
+               
+                <div class="form-group col-md-6">
+                    <label for="phno">Contact no:</label>
+                    <input type="text" class="form-control" ngModel formControlName="Contact" placeholder="Enter your ContactNo">
+                    <span style="color: red;"
+                        *ngIf="regGroup.get('Contact') && regGroup.get('Contact').touched && regGroup.get('Contact').invalid">Plese
+                        fill out Your ContactNum
+                    </span>
+                </div>
+            </div>
+            <div class="form-row col-md-6">
+                <div class="form-group col-md-3">
+                    <button type="submit" class="btn btn-success" (click)="submit()" [disabled]="regGroup.invalid">Submit</button>
+                </div>
+                <div class="form-group col-md-3 offset-3">
+                    <button type="submit" class="btn btn-success">
+                        <a routerLink="/registration" class="ach">Reset</a></button>
+                </div>
+            </div>
+{{regGroup.invalid}}

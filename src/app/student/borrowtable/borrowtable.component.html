@@ -1,0 +1,77 @@
+<section>
+    <h5 style="background-color:red;padding:10px"><i class="fa fa-user" aria-hidden="true"></i>Borrow Books
+        Table</h5><br>
+    <div>
+        <h5 style="background-color: rgba(27, 248, 27, 0.719);padding:10px;margin-left:500px">Select Book</h5>
+    </div><br>
+    <div>
+        <form>
+            <div class="form-group">
+                <label for="Borrower" class="col-form-label">Borrower Type</label>
+                <div>
+                    <select class="form-control">
+                        <option value="-1" selected>--Select--</option>
+                        <option value="1">Faculty</option>
+                        <option value="2">Student</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="username" class="col-form-label">Borrower Name</label>
+                <div>
+                  <input type="text" class="form-control" id="username" placeholder="Username">
+                </div>
+              </div>
+            <div class="form-group">
+                <label for="date" class="col-form-label">Due Date</label>
+                <div>
+                  <input type="date" class="form-control" id="date">
+                </div>
+              </div>
+              <div class="col-sm-3 offset-2">
+                <button type="submit" class="btn" style="background-color:rgba(19, 173, 19, 0.808); border-radius: 10px;" >Borrow</button>
+            </div>
+        </form> 
+    </div>
+    
+    <div style="float:right"><i class="fa fa-search" aria-hidden="true"></i>
+      Search<span> </span><input type="search" style="border:1px black inset;border-radius: 10px;">
+    </div><br><br>
+    
+      <table>
+        <tr>
+          <th>ACC NO.</th> <th>BOOK TITLE</th> <th>CATEGORY</th> <th>AUTHOR</th> 
+          <th>PUBLISHER NAME</th> <th>STATUS</th> <th>ADD</th>
+        </tr>
+        <tr>
+          <td>1</td> <td>Natural Reasource</td> <td>Microbiology</td> <td>Robin Korrod</td>  <td>Marshall</td>
+          <td>New</td>
+          <td><input type="checkbox" name="check">
+        </tr>
+        <tr>
+          <td>2</td> <td>Introduction to Microboilogy </td> <td>Microbiology</td> <td>Carolyn Bradshaw</td> <td>jersey</td> 
+          <td>Old</td> 
+          <td>
+            <input type="checkbox" name="check">
+          </td>
+        </tr>
+        <tr>
+          <td>3</td> <td>Logical Reasoning and concept</td> <td>psycology</td> <td>...</td> <td>....</td>
+          <td>Old</td> 
+          <td><input type="checkbox" name="check"></td>
+        </tr>
+        <tr>
+          <td>4</td> <td>c programming</td> 
+          <td>computer</td> <td>clarke donald</td><td>Westpart</td> <td>Old</td> 
+          <td><input type="checkbox" name="check"></td>
+        </tr>
+        <tr>
+          <td>5</td> <td>Computational Geometry</td> 
+          <td>Mathematics</td> <td>Takashi Maekawa</td>  
+          <td>Takashi Maekawa</td> <td>New</td> 
+          <td><input type="checkbox" name="check"></td>
+        </tr>
+
+    </table>
+</section>
+

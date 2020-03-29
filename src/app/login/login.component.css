@@ -1,0 +1,28 @@
+.addiv
+{
+    margin-left: 10px;
+}
+
+.img
+{
+    height: 420px;
+    width: 100%;
+}
+.row
+{
+    margin-top: 20px;
+    margin-left: 25px;
+}
+.ach
+{
+    color: white;
+    text-decoration: none;
+}
+.hh
+{
+    text-align: center;
+    color:greenyellow;
+}
+label{
+    color: white;
+}

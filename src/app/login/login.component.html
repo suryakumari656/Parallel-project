@@ -1,0 +1,35 @@
+
+<div class="col-md-3">
+    <form [formGroup]="loginGroup">
+        <h1 class="hh">Login Form</h1>
+        <div class="form-group">
+            <label for="UN">UserName</label>
+            <input type="text" class="form-control" ngModel formControlName="username" placeholder="Enter your Username">
+            <span style="color: red;"
+                *ngIf="loginGroup.get('username') &&
+                loginGroup.get('username').touched &&
+                loginGroup.get('username').invalid">
+                Plese fill out the Username
+            </span>
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password</label>
+            <input type="password" class="form-control" ngModel formControlName="password" placeholder="Enter your pasword">
+            <span style="color: red;"
+                *ngIf="loginGroup.get('password') &&
+                loginGroup.get('password').touched &&
+                loginGroup.get('password').invalid">Plese
+                fill out the Password
+            </span>
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn btn-primary form-control" (click)="submit()" [disabled]="loginGroup.invalid">Submit</button>
+            <span *ngIf="error" style="color: red;">Invalid Username or
+                Password</span>
+        </div>
+        <label for="not" style="color:yellow">Not an User...?</label>
+        <button type="button" class="btn btn-success form-control">
+            <a routerLink="/registration" class="ach">Register Here</a>
+        </button>
+    </form>
+</div>
